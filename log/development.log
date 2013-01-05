@@ -1,0 +1,165 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:19:41 +0500
+Served asset /rails.png - 200 OK (3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:41:16 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:44:46 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:44:46 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:44:47 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:44:47 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:44:47 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:44:48 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:44:48 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:44:48 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:46:28 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:46:29 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:47:07 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:47:07 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:49:10 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:49:10 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:50:03 +0500
+Served asset /jquery-1.7.1.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  
+
+Rendered /home/rashed/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:50:04 +0500
+Served asset /rails.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 00:50:46 +0500
+Compiled jquery-1.7.1.min.js  (2ms)  (pid 4829)
+Served asset /jquery-1.7.1.min.js - 200 OK (9ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 00:50:47 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 01:16:40 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 01:16:44 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 02:11:24 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-05 02:15:33 +0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/under_construction.gif" for 127.0.0.1 at 2013-01-05 02:23:10 +0500
+Served asset /under_construction.gif - 200 OK (4ms)
+
+
+Started GET "/assets/under_construction.gif" for 127.0.0.1 at 2013-01-05 02:24:08 +0500
+Served asset /under_construction.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/under_construction.gif" for 127.0.0.1 at 2013-01-05 02:26:24 +0500
+Served asset /under_construction.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 02:27:59 +0500
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/under_construction.gif" for 127.0.0.1 at 2013-01-05 02:27:59 +0500
+Served asset /under_construction.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2013-01-05 09:07:09 +0500
+Served asset /jquery-1.7.1.min.js - 200 OK (34ms)
+
+
+Started GET "/assets/under_construction.gif" for 127.0.0.1 at 2013-01-05 09:07:10 +0500
+Served asset /under_construction.gif - 200 OK (18ms)
