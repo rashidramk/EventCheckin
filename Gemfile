@@ -9,7 +9,7 @@ gem 'rails', '3.1.10'
 
 gem 'paperclip'
 gem "mysql2", "~> 0.3.11"
-#gem 'pg'
+gem 'pg'
 gem 'haml'
 gem 'devise'
 # Gems used only for assets and not required
@@ -38,4 +38,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
 
