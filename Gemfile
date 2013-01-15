@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.10'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -9,7 +9,9 @@ gem 'rails', '3.1.0'
 
 gem 'paperclip'
 gem "mysql2", "~> 0.3.11"
+#gem 'pg'
 gem 'haml'
+gem 'devise'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -36,3 +38,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
