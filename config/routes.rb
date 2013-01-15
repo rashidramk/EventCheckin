@@ -1,4 +1,11 @@
 EventCheckin::Application.routes.draw do
+  resources :users
+
+  devise_scope :user do
+    match "/users/sign_out" =>"devise/sessions#destroy"
+  end
+  devise_for :users, :controllers => {:registrations =>"registrations", :sessions => "sessions" }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +55,8 @@ EventCheckin::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
+  resources :home
 
   # See how all your routes lay out with "rake routes"
 
