@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body{
-	background:url(../images/back_bg_2.png) no-repeat;
+	background:url(/assets/back_bg_2.png) no-repeat;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:12px;}
 
@@ -38,7 +38,7 @@ body{
 	width:700px;}	
 	
 .col_left_text_box{
-	background:url(../images/text_bg2.png) repeat;
+	background:url(/assets/text_bg2.png) repeat;
 	font-size:30px;
 	color:#fefbbe;
 	float:left;
