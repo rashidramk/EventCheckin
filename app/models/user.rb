@@ -1,3 +1,5 @@
 class User < ActiveRecord::Base
-  devise :database_authenticatable, :registerable, :confirmable, :recoverable, :stretches => 20
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+  attr_accessible :email, :password, :password_confirmation
 end
