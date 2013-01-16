@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:url(../images/back_bg_2.png) no-repeat;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;}
+
+*{
+	padding:0px;
+	margin:0px;}
+	
+.clr{
+	clear:both;}
+	
+.fl{
+	float:left;}
+	
+.fr{
+	float:right;}
+	
+.conteanier{
+	width:1006px;
+	margin:auto;}
+	
+.header{
+	padding:18px 4px 126px 0px;}	
+	
+.login_buttons{
+	float:right;
+	padding-right:18px;}	
+	
+.body_area{
+	padding-bottom:314px;}	
+	
+.col_left{
+	float:left;
+	width:700px;}	
+	
+.col_left_text_box{
+	background:url(../images/text_bg2.png) repeat;
+	font-size:30px;
+	color:#fefbbe;
+	float:left;
+	font-family:BernardMT, Arial, Helvetica, sans-serif;
+	padding:8px;
+	margin-bottom:10px;}	
+	
+.col_right{
+	float:left;
+	margin-top:132px;}	
+	
+.icons_box{
+	padding-bottom:10px;}	
+	
+.footer_box{
+	padding:22px 0px 20px;}	
+	
+.footer_text{
+	font-size:18px;
+	color:#fff;
+	width:616px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;}	

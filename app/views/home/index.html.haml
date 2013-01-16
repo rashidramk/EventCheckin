@@ -1,8 +1,39 @@
-%html
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %title Ruby on Rails: Welcome aboard
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Untitled Document
+    %link{:href => "/assets/splash_screen.css", :rel => "stylesheet", :type => "text/css"}/
   %body
-    .content
-      .title_heading
-        %h1 Event Checkin System
-      %img{:src=>"/assets/under_construction.gif", :alt=>"Under Construction"}
+    .conteanier
+      .header
+        .login_buttons
+          %img{:alt => "image", :border => "0", :src => "/assets/rigister.png"}/
+        .login_buttons
+          %img{:alt => "image", :border => "0", :src => "/assets/login_button_2.png"}/
+        .clr
+      .body_area
+        .col_left
+          .col_left_text_box We provide you with a social
+          .clr
+          .col_left_text_box insight to customers who book online
+          .clr
+          .col_left_text_box Increase the conversation and
+          .clr
+          .col_left_text_box increase repeat business
+          .clr
+        .col_right
+          .icons_box
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/fb_bg.png"}/
+          .icons_box
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/twt_bg.png"}/
+          .icons_box
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/google_bg.png"}/
+        .clr
+      .footer_box
+        .footer_text
+          We provide you with a social insight to customers who book online.
+          Increase the conversation and increase repeat business.
