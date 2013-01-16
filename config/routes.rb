@@ -3,6 +3,7 @@ EventCheckin::Application.routes.draw do
 
   devise_scope :user do
     match "/users/sign_out" =>"devise/sessions#destroy"
+    get "sign_in", :to => "devise/sessions#new"
   end
   devise_for :users, :controllers => {:registrations =>"registrations", :sessions => "sessions" }
 
