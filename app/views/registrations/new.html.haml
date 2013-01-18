@@ -1,7 +1,7 @@
 !!!
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %title Untitled Document
+    %title Sing Up
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
   %body
     .conteanier_new
@@ -10,7 +10,7 @@
           %a{:href => "#."}
             %img{:alt => "image", :border => "0", :src => "/assets/logo.png"}/
         .fr
-          %a.login_button{:href => "#."} Login
+          %a.login_button{:href => "/sign_in"} Login
         .clr
         .account_heading Create Your Account
         .account_heading_text Please use the fields given below to create your account on CloudBookings, please keep this information used here safe with you, you need this to use our services.
@@ -92,4 +92,7 @@
         %div
           %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
 :javascript
-  $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+  $(document).ready(function(){
+    $(".chzn-select").chosen();
+    $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+  });
