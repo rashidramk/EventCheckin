@@ -443,15 +443,15 @@
   border-bottom-right-radius: 0;}
   
 .blue_select {
-	background:url(../images/bar_bg.png) repeat-x;
+	background:url(/assets/bar_bg.png) repeat-x;
 	border-radius:5px;}
 	
 .blue_select_cafe {
-	background:url(../images/bar_bg.png) repeat-x;
+	background:url(/assets/bar_bg.png) repeat-x;
 	border-radius:5px;}
 		
 .blue_select .chzn-container-single .chzn-single {
-  background:url(../images/bar_bg.png);
+  background:url(/assets/bar_bg.png);
    font-weight:bold;
   -webkit-border-radius: 0px;
   -moz-border-radius   : 0px;
@@ -475,7 +475,7 @@
  font-weight:normal; }
 
 .blue_select_cafe .chzn-container-single .chzn-single {
-  background:url(../images/bar_bg.png);
+  background:url(/assets/bar_bg.png);
    font-weight:bold;
   -webkit-border-radius: 0px;
   -moz-border-radius   : 0px;
@@ -499,7 +499,7 @@
  font-weight:normal; }
  
 .blue_select .chzn-container-single .chzn-single div b {
-  background: url(../images/drop_down_arrow.png) no-repeat 0 0;
+  background: url(/assets/drop_down_arrow.png) no-repeat 0 0;
   background-position:0% 50%;
   display: block;
   width: 100%;
@@ -507,7 +507,7 @@
   padding-right:0px;}
   
  .blue_select_cafe .chzn-container-single .chzn-single div b {
-  background: url(../images/drop_down_arrow.png) no-repeat 0 0;
+  background: url(/assets/drop_down_arrow.png) no-repeat 0 0;
   background-position:0% 50%;
   display: block;
   width: 100%;
@@ -599,10 +599,10 @@
   border-bottom-left-radius : 0;
   border-bottom-right-radius: 0;}
 .brown_select {
-	background:url(../images/bar_bg.png) repeat-x;
+	background:url(/assets/bar_bg.png) repeat-x;
 	border-radius:5px;}
 .brown_select .chzn-container-single .chzn-single {
-  background:url(../images/date_select_bg.png) repeat-x;
+  background:url(/assets/date_select_bg.png) repeat-x;
    font-weight:bold;
   -webkit-border-radius: 5px;
   -moz-border-radius   : 5px;
@@ -626,7 +626,7 @@
  font-weight:normal; }
  
 .brown_select .chzn-container-single .chzn-single div b {
-  background: url(../images/date_selcet_arrow.png) no-repeat 0 0;
+  background: url(/assets/date_selcet_arrow.png) no-repeat 0 0;
   background-position:0% 50%;
   display: block;
   width: 100%;
@@ -665,7 +665,7 @@
   -o-text-overflow: ellipsis;
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  background:url(../images/calendar_icon.png) no-repeat;
+  background:url(/assets/calendar_icon.png) no-repeat;
   padding-left:32px;
   font-family:aller;
   font-size:14px;

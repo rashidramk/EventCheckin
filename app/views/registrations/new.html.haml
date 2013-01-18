@@ -1,0 +1,99 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Untitled Document
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "/assets/styles.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/assets/chosen.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "/assets/jquery-1.7.1.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/chosen.jquery.js", :type => "text/javascript"}
+  %body
+    .conteanier_new
+      .header_new
+        .fl
+          %a{:href => "#."}
+            %img{:alt => "image", :border => "0", :src => "/assets/logo.png"}/
+        .fr
+          %a.login_button{:href => "#."} Login
+        .clr
+        .account_heading Create Your Account
+        .account_heading_text Please use the fields given below to create your account on CloudBookings, please keep this information used here safe with you, you need this to use our services.
+
+      .body_area_new
+        .account_details_box Account Details
+        .all_field_box
+          .account_field_row
+            .field_account_col1
+              .field_account_text Email
+              .field_account
+                %input.field_account_size{:type => "text"}/
+            .field_account_col1
+              .field_account_text Country
+              .field_account.blue_select
+                %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
+                  %option Select
+                  %option
+            .clr
+          .account_field_row
+            .field_account_col1
+              .field_account_text Password
+              .field_account
+                %input.field_account_size{:type => "text"}/
+            .field_account_col1
+              .field_account_text Confirm Password
+              .field_account
+                %input.field_account_size{:type => "text"}/
+            .clr
+          .account_field_row
+            .field_account_col1
+              .field_account_text Address
+              .field_account
+                %input.field_account_size{:type => "text"}/
+            .field_account_col1
+              .field_account_text Phone Number
+              .field_account.blue_select
+                %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
+                  %option Select
+                  %option
+            .clr
+          .account_field_row
+            .field_account_col1
+              .field_account_text Date of birth
+              .field_account
+                %input.field_account_size2{:placeholder => "01/05/2012", :type => "text"}/
+            .field_account_col1
+              .field_account_text Gender
+              .field_account.blue_select
+                %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
+                  %option Please Select
+                  %option Male
+                  %option Female
+            .clr
+          .agree_box
+            .agree_check_box
+              %input{:type => "checkbox"}/
+            .agree_text I agree to the terms of service and privacy policy.
+            .fl
+              %a{:href => "#."}
+                %img{:alt => "image", :border => "0", :src => "/assets/account.png"}/
+            .clr
+      .footer
+        %div
+          %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+        .footer_text_box_new
+          .footer_text
+            %a{:href => "#."} Terms of Service
+          .footer_text_new |
+          .footer_text
+            %a{:href => "#."} Privacy Policy
+          .footer_text_new |
+          .footer_text
+            %a{:href => "#."} Support
+          .footer_text_new |
+          .footer_text
+            %a{:href => "#."} Contact Us
+          .clr
+        %div
+          %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+    :javascript
+      $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});

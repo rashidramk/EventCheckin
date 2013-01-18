@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body{
-	background:url(../images/project_bg.png) repeat-x #fff;
+	background:url(/assets/project_bg.png) repeat-x #fff;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:12px;}
 
@@ -29,7 +29,7 @@ body{
 	
 .header{
 	text-align:center;
-	background:url(../images/header_bg.png) no-repeat;}	
+	background:url(/assets/header_bg.png) no-repeat;}
 	
 .header_new{
 	padding:26px 14px 34px;}						
@@ -42,7 +42,7 @@ body{
 	
 .body_area{
 	padding:20px 0px 8px 22px;
-	background:url(../images/body_bg.png) repeat-x;
+	background:url(/assets/body_bg.png) repeat-x;
 	border-radius:5px;
 	border:1px solid #ecf5f4;
 	border-top:none;}
@@ -139,7 +139,7 @@ a.login_button{
 	min-width:100px;
 	text-align:center;
 	font-size:22px;
-	background:url(../images/login_button.png) no-repeat;
+	background:url(/assets/login_button.png) no-repeat;
 	font-family:Myriad Pro;}	
 	
 .account_heading{
@@ -160,7 +160,7 @@ a.login_button{
 	
 .body_area_new{
 	padding:18px 14px 28px 12px;
-	background:url(../images/back_bg.png) repeat-x #d2e7e6;
+	background:url(/assets/back_bg.png) repeat-x #d2e7e6;
 	border-radius:5px;
 	border:1px solid #ecf5f4;
 	border-top:none;}	
@@ -176,7 +176,7 @@ a.login_button{
 	font-family:HelveticaNeue, Arial, Helvetica, sans-serif;}	
 	
 .all_field_box{
-	background:url(../images/fields_box_bg.png) repeat-x #d3e7e6;
+	background:url(/assets/fields_box_bg.png) repeat-x #d3e7e6;
 	box-shadow:0px 0px 2px 2px #d4dedd;
 	margin-top:10px;
 	padding-bottom:42px;
@@ -217,14 +217,14 @@ a.login_button{
     height: 22px;}	
 	
 .field_account_col1 .blue_select .chzn-container-single .chzn-single div b{
-	background:url(../images/down_arow.png) no-repeat;}	
+	background:url(/assets/down_arow.png) no-repeat;}
 	
 .field_account_col1 .blue_select .chzn-container-single .chzn-single div{
 	width:24px;
 	top:12px;}	
 	
 .field_account_size2{
-    background:url(../images/clender.png) no-repeat 2% 38% #68C4CF;
+    background:url(/assets/clender.png) no-repeat 2% 38% #68C4CF;
     border: medium none;
     box-shadow: 1px 1px #549EA7 inset;
     color: #fff;
@@ -283,7 +283,7 @@ a.login_button{
 	text-shadow:2px 2px #5ca1a9;}	
 	
 .body_area_wrepper{
-	background:url(../images/body_bg_new.png) repeat-y;
+	background:url(/assets/body_bg_new.png) repeat-y;
 	padding:38px 0px 0px 36px;
 	border-radius:5px;}	
 	
@@ -298,7 +298,7 @@ a.login_button{
 	margin-bottom:38px;}	
 	
 .home_image_text{
-	background: url("../images/text_bg.png") repeat-x scroll 0 0 transparent;
+	background: url("/assets/text_bg.png") repeat-x scroll 0 0 transparent;
     border-radius: 0 0 5px 5px;
     font-family: HelveticaNeue,Arial,Helvetica,sans-serif;
     font-size: 33px;
@@ -317,7 +317,7 @@ a.login_button{
 	margin-bottom:38px;}	
 	
 .home_image_text2 {
-    background: url("../images/text_bg.png") repeat-x scroll 0 0 transparent;
+    background: url("/assets/text_bg.png") repeat-x scroll 0 0 transparent;
     border-radius: 0 0 5px 5px;
     color: #FFFFFF;
     font-family: HelveticaNeue,Arial,Helvetica,sans-serif;
