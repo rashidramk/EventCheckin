@@ -3,10 +3,6 @@
   %head
     %title Untitled Document
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %link{:href => "/assets/styles.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "/assets/chosen.css", :rel => "stylesheet", :type => "text/css"}/
-    %script{:src => "/assets/jquery-1.7.1.min.js", :type => "text/javascript"}
-    %script{:src => "/assets/chosen.jquery.js", :type => "text/javascript"}
   %body
     .conteanier_new
       .header_new
@@ -95,5 +91,5 @@
           .clr
         %div
           %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
-    :javascript
-      $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+:javascript
+  $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
