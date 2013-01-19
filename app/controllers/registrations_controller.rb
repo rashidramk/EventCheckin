@@ -1,12 +1,14 @@
 class RegistrationsController < Devise::RegistrationsController
   # GET /resource/sign_up
   def new
+    @countries = Country.all
     resource = build_resource({})
     respond_with resource
   end
 
   # POST /resource
   def create
+    debugger
     build_resource
 
     if resource.save

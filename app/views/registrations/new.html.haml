@@ -17,62 +17,60 @@
 
       .body_area_new
         .account_details_box Account Details
-        .all_field_box
-          .account_field_row
-            .field_account_col1
-              .field_account_text Email
-              .field_account
-                %input.field_account_size{:type => "text"}/
-            .field_account_col1
-              .field_account_text Country
-              .field_account.blue_select
-                %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
-                  %option Select
-                  %option
-            .clr
-          .account_field_row
-            .field_account_col1
-              .field_account_text Password
-              .field_account
-                %input.field_account_size{:type => "text"}/
-            .field_account_col1
-              .field_account_text Confirm Password
-              .field_account
-                %input.field_account_size{:type => "text"}/
-            .clr
-          .account_field_row
-            .field_account_col1
-              .field_account_text Address
-              .field_account
-                %input.field_account_size{:type => "text"}/
-            .field_account_col1
-              .field_account_text Phone Number
-              .field_account.blue_select
-                %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
-                  %option Select
-                  %option
-            .clr
-          .account_field_row
-            .field_account_col1
-              .field_account_text Date of birth
-              .field_account
-                %input.field_account_size2{:placeholder => "01/05/2012", :type => "text"}/
-            .field_account_col1
-              .field_account_text Gender
-              .field_account.blue_select
-                %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
-                  %option Please Select
-                  %option Male
-                  %option Female
-            .clr
-          .agree_box
-            .agree_check_box
-              %input{:type => "checkbox"}/
-            .agree_text I agree to the terms of service and privacy policy.
-            .fl
-              %a{:href => "#."}
-                %img{:alt => "image", :border => "0", :src => "/assets/account.png"}/
-            .clr
+        = form_for(resource, :url => registration_path(resource),:html => {:class => "registration_form"}) do |f|
+          .all_field_box
+            .account_field_row
+              .field_account_col1
+                .field_account_text Email
+                .field_account
+                  =f.text_field :email ,:class=> "field_account_size"
+              .field_account_col1
+                .field_account_text Country
+                .field_account.blue_select
+                  %select.chzn-select{:class=>"step_select_bar", :style => "width:238px", :id=>"user_country_id", :name => "user[country_id]", :prompt => 'Select a country'}
+                    = options_from_collection_for_select @countries, :id, :country_name, :selected => "#{params[:country]}"
+              .clr
+            .account_field_row
+              .field_account_col1
+                .field_account_text Password
+                .field_account
+                  =f.password_field :password, :class=>"field_account_size"
+              .field_account_col1
+                .field_account_text Confirm Password
+                .field_account
+                  =f.password_field :password_confirmation, :class=> "field_account_size"
+              .clr
+            .account_field_row
+              .field_account_col1
+                .field_account_text Address
+                .field_account
+                  =f.text_field :address, :class=> "field_account_size"
+              .field_account_col1
+                .field_account_text Phone Number
+                .field_account
+                  =f.text_field :phone, :class=> "field_account_size"
+              .clr
+            .account_field_row
+              .field_account_col1
+                .field_account_text Date of birth
+                .field_account
+                  =f.text_field :date_of_birth, :class=> "field_account_size2"
+              .field_account_col1
+                .field_account_text Gender
+                .field_account.blue_select
+                  %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
+                    %option Please Select
+                    %option Male
+                    %option Female
+              .clr
+            .agree_box
+              .agree_check_box
+                =f.check_box :terms
+              .agree_text I agree to the terms of service and privacy policy.
+              .fl
+                %a{:href => "#.", :class=>"submit_button"}
+                  %img{:alt => "image", :border => "0", :src => "/assets/account.png"}/
+              .clr
       .footer
         %div
           %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
@@ -98,4 +96,43 @@
   $(document).ready(function(){
     $(".chzn-select").chosen();
     $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+    formvalidation();
+  });
+  function formvalidation()
+  {
+    $(".registration_form").validate({
+      rules :{
+        "user[email]":{
+          required: true,
+          email: true
+        },
+        "user[password]":{
+          required: true,
+          minlength: 8
+        },
+        "user[password_confirmation]":{
+          required: true,
+          minlength: 8,
+          equalTo: '.field_account #user_password'
+        },
+        "user[phone]": {
+          required: true,
+          digits: true
+        }
+      },
+      messages: {
+
+      },
+      submithandler: function(form)
+      {
+       form.submit();
+      }
+
+    });
+  }
+
+
+  $(".submit_button").click(function(event){
+    formvalidation();
+    $(".registration_form").submit();
   });

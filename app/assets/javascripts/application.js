@@ -7,6 +7,7 @@
 //= require jquery
 //= require jquery-1.7.1.min
 //= require chosen.jquery
+//= require jquery-validate
 
 
 
