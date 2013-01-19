@@ -1,9 +1,10 @@
 EventCheckin::Application.routes.draw do
-  resources :users
+
 
   devise_scope :user do
-    match "/users/sign_out" =>"devise/sessions#destroy"
-    get "sign_in", :to => "devise/sessions#new"
+    match "/users/sign_out" => "sessions#destroy"
+    match "/sign_in"  => "devise/sessions#new"
+    match "users/sign_in"  => "devise/sessions#new"
     match 'sign_up' => "registrations#new"
   end
   devise_for :users, :controllers => {:registrations =>"registrations", :sessions => "sessions" }
@@ -60,6 +61,7 @@ EventCheckin::Application.routes.draw do
   root :to => 'home#index'
   resources :home
   resources :home1
+  resource  :sessions
 
   # See how all your routes lay out with "rake routes"
 

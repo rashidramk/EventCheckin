@@ -18,6 +18,9 @@ body{
 	
 .fr{
 	float:right;}
+.hidden{
+    display: none;
+}
 	
 .conteanier{
 	width:546px;
@@ -231,7 +234,7 @@ a.login_button{
     width: 154px;}	
 	
 .agree_box{
-	margin:164px 0px 0px 96px;
+	margin:72px 0px 0px 96px;
 	background:#509300;
 	width:653px;}
 	
@@ -611,4 +614,8 @@ a.user_col2_button{
 	padding:10px 0px 14px 6px;
 	font-family:Myriad Pro;
 	line-height:24px;
-	font-size:21px;}	
+	font-size:21px;}
+.error{
+    color: #ff0000;
+
+}

@@ -21,6 +21,16 @@
           .all_field_box
             .account_field_row
               .field_account_col1
+                .field_account_text First Name
+                .field_account
+                  =f.text_field :first_name, :class=>"field_account_size"
+              .field_account_col1
+                .field_account_text Last Name
+                .field_account
+                  =f.text_field :last_name, :class=> "field_account_size"
+              .clr
+            .account_field_row
+              .field_account_col1
                 .field_account_text Email
                 .field_account
                   =f.text_field :email ,:class=> "field_account_size"
@@ -54,14 +64,11 @@
               .field_account_col1
                 .field_account_text Date of birth
                 .field_account
-                  =f.text_field :date_of_birth, :class=> "field_account_size2"
+                  =f.text_field :date_of_birth, :class=> "field_account_size2 date", :readonly=>"readonly"
               .field_account_col1
                 .field_account_text Gender
                 .field_account.blue_select
-                  %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
-                    %option Please Select
-                    %option Male
-                    %option Female
+                  = f.select 'gender', options_for_select($gender), {}, {:class => "chzn-select",:style => "width:238px"}
               .clr
             .agree_box
               .agree_check_box
@@ -96,12 +103,22 @@
   $(document).ready(function(){
     $(".chzn-select").chosen();
     $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+    $('.date').click(function(event){$('#ui-datepicker-div').css('z-index','30');});
+    $('.date').datepicker({
+       onSelect: function(dateText, inst){
+         selDate = dateText;
+
+         }
+    });
     formvalidation();
   });
   function formvalidation()
   {
     $(".registration_form").validate({
       rules :{
+        "user[first_name]":{
+          required: true
+        },
         "user[email]":{
           required: true,
           email: true

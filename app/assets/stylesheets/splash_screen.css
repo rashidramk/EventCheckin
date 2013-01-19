@@ -18,6 +18,9 @@ body{
 	
 .fr{
 	float:right;}
+.hidden{
+    display: none;
+}
 	
 .conteanier{
 	width:1006px;

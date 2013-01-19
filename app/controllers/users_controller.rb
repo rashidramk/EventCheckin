@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    #debugger
+    debugger
     @user = User.new(params[:user])
     if @user.save
       redirect_to "/home1"

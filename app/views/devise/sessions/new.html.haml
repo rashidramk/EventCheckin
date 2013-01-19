@@ -1,0 +1,88 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title PeopleCheck::Login
+  %body
+    .conteanier
+      .header
+        .logo_image
+          %a{:href => "#."}
+            %img{:alt => "image", :border => "0", :src => "/assets/logo.png"}/
+        .clr
+      .body_area
+        .body_col_1
+          = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+            .body_col_1_text Login
+            .body_field
+              =f.email_field :email, :placeholder=>"Enter Your Email Address",:class =>"body_field_size"
+            .body_field
+              = f.password_field :password, :placeholder => "Enter Password", :class => "body_field_size"
+            .check_row
+              .fl
+                - if devise_mapping.rememberable?
+                  = f.check_box :remember_me
+                  .check_text Keep me logged in
+              .clr
+            %div
+              %a{:href => "#.", :class=>"submit_user"}
+                %img{:alt => "image", :border => "0", :src => "/assets/login_bg.png"}/
+            .account_text
+              Don't have an account?
+              %a{:href => "#."} Create One
+            .hidden
+              = render "devise/shared/links"
+        .fl
+          .col_2_text Use Your existing account from
+          .icons_box
+            .fl
+              %a{:href => "#."}
+                %img{:alt => "image", :border => "0", :src => "/assets/fb_icon.png"}/
+            .icons_text
+              %a{:href => "#."} Facebook
+            .clr
+          .icons_box
+            .fl
+              %a{:href => "#."}
+                %img{:alt => "image", :border => "0", :src => "/assets/twt_icon.png"}/
+            .icons_text
+              %a{:href => "#."}
+                Twitter
+            .clr
+        .clr
+      %div
+        %img{:alt => "image", :border => "0", :src => "/assets/shadow.png"}/
+      .footer
+        %div
+          %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+        .footer_text_box
+          .footer_text
+            %a{:href => "#."} Terms of Service
+          .footer_text_new
+            |
+          .footer_text
+            %a{:href => "#."} Privacy Policy
+          .footer_text_new
+            |
+          .footer_text
+            %a{:href => "#."} Support
+          .footer_text_new
+            |
+          .footer_text
+            %a{:href => "#."} Contact Us
+          .clr
+        %div
+          %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+
+:javascript
+  $(document).ready(function(){
+    submitform();
+  });
+
+  function submitform()
+  {
+    $(".submit_user").click(function(){
+      $(".user_new").submit();
+    });
+  }
+
