@@ -617,5 +617,14 @@ a.user_col2_button{
 	font-size:21px;}
 .error{
     color: #ff0000;
-
+}
+#notice{
+    border: 1px solid #990000;
+    color: #990000;
+    float: left;
+    font-size: 13px;
+    margin-left: 205px;
+    margin-right: 0;
+    padding: 10px;
+    position: absolute;
 }

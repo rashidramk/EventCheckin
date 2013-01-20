@@ -1,14 +1,12 @@
 EventCheckin::Application.routes.draw do
-
-
   devise_scope :user do
     match "/users/sign_out" => "sessions#destroy"
-    match "/sign_in"  => "devise/sessions#new"
-    match "users/sign_in"  => "devise/sessions#new"
+    #match "/sign_in"  => "sessions#new"
+    #match "users/sign_in"  => "sessions#new"
     match 'sign_up' => "registrations#new"
   end
   devise_for :users, :controllers => {:registrations =>"registrations", :sessions => "sessions" }
-
+  #resources :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -7,12 +7,12 @@
     .conteanier
       .header
         .logo_image
-          %a{:href => "#."}
+          %a{:href => "/"}
             %img{:alt => "image", :border => "0", :src => "/assets/logo.png"}/
         .clr
       .body_area
         .body_col_1
-          = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+          = form_for(resource, :as => resource_name, :url => session_path(resource)) do |f|
             .body_col_1_text Login
             .body_field
               =f.email_field :email, :placeholder=>"Enter Your Email Address",:class =>"body_field_size"
@@ -24,12 +24,22 @@
                   = f.check_box :remember_me
                   .check_text Keep me logged in
               .clr
+            - if flash[:warning] or flash[:notice] or flash[:alert]
+              #notice
+                - if flash[:warning]
+                  = flash[:warning]
+                - if flash[:notice]
+                  = flash[:notice].html_safe
+                - if flash[:alert]
+                  = flash[:alert].html_safe
+              .clr
+
             %div
               %a{:href => "#.", :class=>"submit_user"}
                 %img{:alt => "image", :border => "0", :src => "/assets/login_bg.png"}/
             .account_text
               Don't have an account?
-              %a{:href => "#."} Create One
+              %a{:href => "/users/sign_up"} Create One
             .hidden
               = render "devise/shared/links"
         .fl
