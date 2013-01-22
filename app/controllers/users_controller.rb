@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  before_filter :authenticate_user!, :only =>"user_profile"
   def index
     @users = User.all
 
@@ -88,5 +89,8 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :ok }
     end
+  end
+  def user_profile
+
   end
 end

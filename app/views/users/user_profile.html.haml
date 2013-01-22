@@ -1,0 +1,151 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title PeopleCheck::Edit Profile
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+  %body
+    .conteanier_home
+      .all_header_box
+        .header_home
+          .fl
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/small_logo.png"}/
+          .dashed_text_box
+            .dashed_text
+              %a{:href => "#."} Dashboard
+            .dashed_text2
+              %a{:href => "#."} Apps
+            .dashed_text3
+              %a{:href => "#."} I want this !
+            .clr
+          .header_field_box
+            %input.header_field_size{:placeholder => "Search", :type => "text"}/
+          .checkin_box
+            .checkin_box_text
+              %a{:href => "#."} CheckIn
+            .checkin_box_text
+              %a{:href => "/users/user_profile"} Profile
+            .checkin_box_text
+              %a{:href => "#."} Event
+            .checkin_box_text
+              %a{:href => "#."} Setting
+            .clr
+          .refresh_row
+            .refresh_box
+              .fl
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/refresh.png"}/
+              .refresh_text
+                %a{:href => "#."} Reset
+              .clr
+            .refresh_box
+              .fl
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/theme.png"}/
+              .refresh_text2
+                %a{:href => "#."} Theme
+              .clr
+            .refresh_box
+              .fl
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/logout.png"}/
+              .refresh_text
+                %a{:href => "/users/sign_out"} Logout
+              .clr
+            .clr
+          .clr
+      .body_wrepper_profile
+        .john_name_box
+          .john_name
+            - if current_user.first_name and current_user.last_name
+              = current_user.first_name+" "+current_user.last_name
+            - elsif current_user.first_name
+              = current_user.first_name
+            -elsif current_user.last_name
+              = current_user.last_name
+            -else
+              User Name
+          .fl
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/john.png"}/
+          .clr
+        .clr
+        .profile_body
+          .user_col1
+            %div
+              %a{:href => "#."}
+                %img{:alt => "image", :border => "0", :src => "/assets/user_new.png"}/
+            .letest_text
+              %a{:href => "#."}
+                - if current_user.first_name and current_user.last_name
+                  = current_user.first_name+" "+current_user.last_name
+                - elsif current_user.first_name
+                  = current_user.first_name
+                -elsif current_user.last_name
+                  = current_user.last_name
+                -else
+                  User Name
+            .letest_text2
+              %a{:href => "/users/user_profile"} Profile
+            .letest_text
+              %a{:href => "#."} Latest
+            .letest_text3
+              %a{:href => "#."} Mixes
+            .letest_text2
+              %a{:href => "#."} Connections
+            .letest_text4
+              %a{:href => "#."} Photos
+          .user_col2
+            .user_col2_textarea
+              %textarea.user_col2_textarea_size
+            .user_field_button
+              .user_col2_field
+                %input.user_col2_field_size{:type => "text"}/
+              .fl
+                %a.user_col2_button{:href => "#."} Browse
+              .clr
+            .user_field_button
+              .user_col2_field
+                %input.user_col2_field_size{:type => "text"}/
+              .fl
+                %a.user_col2_button{:href => "#."} Browse
+              .clr
+            .remind_button_box
+              .remind_button
+                %a.user_col2_button{:href => "#."} Remind Later
+              .remind_button
+                %a.user_col2_button{:href => "#."} Save
+              .clr
+          .user_col3
+            .user_col3_text_box
+              When I grow up.I want to drive volvo station vagon.I like flouriscent colur.
+              %p I like to design stuff
+            .user_col3_text_box
+              Loss Asngeles CA
+              = current_user.email
+              Connections
+            .user_col3_text_box2 My likes
+            %div
+              %a{:href => "#."}
+                %img{:alt => "image", :border => "0", :src => "/assets/likes.png"}/
+      .all_footer
+        .footer
+          %div
+            %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+          .footer_text_box_new
+            .footer_text
+              %a{:href => "#."} Terms of Service
+            .footer_text_new |
+            .footer_text
+              %a{:href => "#."} Privacy Policy
+            .footer_text_new |
+            .footer_text
+              %a{:href => "#."} Support
+            .footer_text_new |
+            .footer_text
+              %a{:href => "#."} Contact Us
+            .clr
+          %div
+            %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+:javascript
+  $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
