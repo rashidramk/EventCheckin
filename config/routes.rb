@@ -1,4 +1,14 @@
 EventCheckin::Application.routes.draw do
+  resources :tables
+
+  resources :restaurants
+
+  resources :bookings do
+    collection do
+      get 'make_booking'
+    end
+  end
+
   devise_scope :user do
     match "/users/sign_out" => "sessions#destroy"
     #match "/sign_in"  => "sessions#new"

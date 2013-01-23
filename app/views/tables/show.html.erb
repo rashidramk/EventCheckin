@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Covers:</b>
+  <%= @table.covers %>
+</p>
+
+<p>
+  <b>Table no:</b>
+  <%= @table.table_no %>
+</p>
+
+<p>
+  <b>Table name:</b>
+  <%= @table.table_name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @table.user_id %>
+</p>
+
+<p>
+  <b>Restaurant:</b>
+  <%= @table.restaurant_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

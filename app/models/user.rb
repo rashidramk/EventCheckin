@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
   #attr_accessible :email, :password, :password_confirmation
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   belongs_to :country
+  has_many :bookings
 end

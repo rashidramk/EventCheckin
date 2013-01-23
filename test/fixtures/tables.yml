@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  covers: 1
+  table_no: 1
+  table_name: MyString
+  user_id: 1
+  restaurant_id: 1
+
+two:
+  covers: 1
+  table_no: 1
+  table_name: MyString
+  user_id: 1
+  restaurant_id: 1

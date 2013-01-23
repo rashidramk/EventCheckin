@@ -628,3 +628,14 @@ a.user_col2_button{
     padding: 10px;
     position: absolute;
 }
+.search_booking{
+ padding-left: 346px;
+ margin-top: 41px;
+}
+a.check_availability1
+{
+    background: url("/assets/cloud_edit_bg.png") repeat-x scroll 0 0 transparent;
+    padding:  9px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+}
