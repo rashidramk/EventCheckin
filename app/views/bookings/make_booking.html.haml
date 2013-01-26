@@ -1,7 +1,7 @@
 !!!
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %title Sing Up
+    %title PeopleCheck::Booking
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
   %body
     .conteanier_home
@@ -24,7 +24,7 @@
             .checkin_box_text
               %a{:href => "#."} CheckIn
             .checkin_box_text
-              %a{:href => "/users/user_profile"} Profile
+              %a{:href => "#."} Profile
             .checkin_box_text
               %a{:href => "#."} Event
             .checkin_box_text
@@ -50,39 +50,152 @@
                 %a{:href => "#."}
                   %img{:alt => "image", :border => "0", :src => "/assets/logout.png"}/
               .refresh_text
-                %a{:href => "/users/sign_out"} Logout
+                %a{:href => "#."} Logout
               .clr
             .clr
           .clr
-      .body_area_wrepper
-        .account_details_box Booking
-        /= form_tag(resource, :url => registration_path(resource),:html => {:class => "registration_form"}) do |f|
-        .all_field_box
-          .account_field_row
-            .field_account_col1
-              .field_account_text Restaurants
-              .field_account.blue_select
-                %select.chzn-select{"data-placeholder" => "00:00 AM", :style => "width:238px;"}
-                  %option Please Select
-                  %option Heaven Restaurant
-                  %option Club Hotel
-            .field_account_col1
-              .field_account_text Booking Date
-              .field_account
-                %input.field_account_size2{:placeholder => "01/05/2012", :type => "text"}/
-            .clr
+      .body_wrepper_profile
+        .john_name_box
+          .john_name John Stephen
+          .fl
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/john.png"}/
+          .clr
+        .clr
+        .booking_body
+          .make_booking
 
-          .account_field_row
-            .field_account_col1
-              .field_account_text Guests
-              .field_account
-                %input.field_account_size{:placeholder => "10", :type => "text",:style=>"text-align:center;"}/
-            .field_account_col1
-              .field_account_text
-              .field_account{:style=>"padding-top:30px;"}
-                .check_availability
-                  %a{:href=>"#.",:class=>"check_availability1"} Check Availability
-            .clr
+            //= form_tag("/bookings")
+            .dfdf
+              .make_booking_text Make a  Restaurant Booking
+              .make_button
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/name_button.png"}/
+              %div
+                %select{:class=>"make_drop_down_size", :id=>"restaurant_id", :name => "restaurants[restaurant_id]", :prompt => 'Select a restaurant'}
+                  = options_from_collection_for_select @restaurants, :id, :name
+              .find_table_row
+                .find_table_box
+                  .find_table_image
+                    %a{:href => "#."}
+                      %img{:alt => "image", :border => "0", :src => "/assets/clender_new.png"}/
+                  .fl
+                    %input.find_table_drop_size1
+
+                  .clr
+                .find_table_box
+                  .find_table_image
+                    %a{:href => "#."}
+                      %img{:alt => "image", :border => "0", :src => "/assets/clock.png"}/
+                  .fl
+                    %select.find_table_drop_size#time_slots
+                      %option{:value => "12:00 AM"} 12:00 AM
+                      %option{:value => "12:30 AM"} 12:30 AM
+                      %option{:value => "1:00 AM"} 1:00 AM
+                      %option{:value => "1:30 AM"} 1:30 AM
+                      %option{:value => "2:00 AM"} 2:00 AM
+                      %option{:value => "2:30 AM"} 2:30 AM
+                      %option{:value => "3:00 AM"} 3:00 AM
+                      %option{:value => "3:30 AM"} 3:30 AM
+                      %option{:value => "4:00 AM"} 4:00 AM
+                      %option{:value => "4:30 AM"} 4:30 AM
+                      %option{:value => "5:00 AM"} 5:00 AM
+                      %option{:value => "5:30 AM"} 5:30 AM
+                      %option{:value => "6:00 AM"} 6:00 AM
+                      %option{:value => "6:30 AM"} 6:30 AM
+                      %option{:value => "7:00 AM"} 7:00 AM
+                      %option{:value => "7:30 AM"} 7:30 AM
+                      %option{:value => "8:00 AM"} 8:00 AM
+                      %option{:value => "8:30 AM"} 8:30 AM
+                      %option{:value => "9:00 AM"} 9:00 AM
+                      %option{:value => "9:30 AM"} 9:30 AM
+                      %option{:value => "10:00 AM"} 10:00 AM
+                      %option{:value => "10:30 AM"} 10:30 AM
+                      %option{:value => "11:00 AM"} 11:00 AM
+                      %option{:value => "11:30 AM"} 11:30 AM
+                      %option{:value => "12:00 PM"} 12:00 PM
+                      %option{:value => "12:30 PM"} 12:30 PM
+                      %option{:value => "1:00 PM"} 1:00 PM
+                      %option{:value => "1:30 PM"} 1:30 PM
+                      %option{:value => "2:00 PM"} 2:00 PM
+                      %option{:value => "2:30 PM"} 2:30 PM
+                      %option{:value => "3:00 PM"} 3:00 PM
+                      %option{:value => "3:30 PM"} 3:30 PM
+                      %option{:value => "4:00 PM"} 4:00 PM
+                      %option{:value => "4:30 PM"} 4:30 PM
+                      %option{:value => "5:00 PM"} 5:00 PM
+                      %option{:value => "5:30 PM"} 5:30 PM
+                      %option{:value => "6:00 PM"} 6:00 PM
+                      %option{:value => "6:30 PM"} 6:30 PM
+                      %option{:selected => "selected", :value => "7:00 PM"} 7:00 PM
+                      %option{:value => "7:30 PM"} 7:30 PM
+                      %option{:value => "8:00 PM"} 8:00 PM
+                      %option{:value => "8:30 PM"} 8:30 PM
+                      %option{:value => "9:00 PM"} 9:00 PM
+                      %option{:value => "9:30 PM"} 9:30 PM
+                      %option{:value => "10:00 PM"} 10:00 PM
+                      %option{:value => "10:30 PM"} 10:30 PM
+                      %option{:value => "11:00 PM"} 11:00 PM
+                      %option{:value => "11:30 PM"} 11:30 PM
+                  .clr
+                .find_table_box
+                  .find_table_image
+                    %a{:href => "#."}
+                      %img{:alt => "image", :border => "0", :src => "/assets/people.png"}/
+                  .fl
+                    %select.find_table_drop_size#covers
+                      %option{:value => "1"} 1 person
+                      %option{:selected => "selected", :value => "2"} 2 people
+                      %option{:value => "3"} 3 people
+                      %option{:value => "4"} 4 people
+                      %option{:value => "5"} 5 people
+                      %option{:value => "6"} 6 people
+                      %option{:value => "7"} 7 people
+                      %option{:value => "8"} 8 people
+                      %option{:value => "9"} 9 people
+                      %option{:value => "10"} 10 people
+                      %option{:value => "11"} 11 people
+                      %option{:value => "12"} 12 people
+                      %option{:value => "13"} 13 people
+                      %option{:value => "14"} 14 people
+                      %option{:value => "15"} 15 people
+                      %option{:value => "16"} 16 people
+                      %option{:value => "17"} 17 people
+                      %option{:value => "18"} 18 people
+                      %option{:value => "19"} 19 people
+                      %option{:value => "20"} 20 people
+                      %option{:value => "21"} Larger Party
+                  .clr
+                .fl
+                  %a{:href => "#.",:class=>"find_booking_btn"}
+                    %img{:alt => "image", :border => "0", :src => "/assets/find_button.png"}/
+                .clr
+          .find_booking_table
+            %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+              %tbody
+                %tr
+                  %th.find_booking_table_heading Table Name
+                  %th.find_booking_table_heading_2 Table Number
+                  %th.find_booking_table_heading_2 Capacity
+                  %th.find_booking_table_heading_3 Price
+                  %th.find_booking_table_heading_4 Availability ( Click time to reserve )
+                %tr
+                  %td Corner Table
+                  %td Table 1
+                  %td Min : 2 - Max : 5
+                  %td $10
+                  %td
+                    .time_cafe_box
+                      .cafe_green_box_active 12:00
+                      .cafe_green_box
+                        %a{:href => "#."} 12:30
+                      .cafe_green_box
+                        %a{:href => "#."} 13:00
+                      .cafe_green_box
+                        %a{:href => "#."} 13:30
+                      .cafe_green_box
+                        %a{:href => "#."} 14:00
+                      .clr
       .all_footer
         .footer
           %div
@@ -90,72 +203,34 @@
           .footer_text_box_new
             .footer_text
               %a{:href => "#."} Terms of Service
-            .footer_text_new
-              |
+            .footer_text_new |
             .footer_text
               %a{:href => "#."} Privacy Policy
-            .footer_text_new
-              |
+            .footer_text_new |
             .footer_text
               %a{:href => "#."} Support
-            .footer_text_new
-              |
+            .footer_text_new |
             .footer_text
               %a{:href => "#."} Contact Us
             .clr
           %div
             %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
 :javascript
+
   $(document).ready(function(){
-    $(".chzn-select").chosen();
-    $(".chzn-select-deselect").chosen({allow_single_deselect:true});
-    $('.date').click(function(event){$('#ui-datepicker-div').css('z-index','30');});
-    $('.date').datepicker({
+    $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+    $('.find_table_drop_size1').click(function(event){$('#ui-datepicker-div').css('z-index','30');});
+    $('.find_table_drop_size1').datepicker({
        onSelect: function(dateText, inst){
          selDate = dateText;
 
          }
     });
-    formvalidation();
-  });
-  function formvalidation()
-  {
-    $(".registration_form").validate({
-      rules :{
-        "user[first_name]":{
-          required: true
-        },
-        "user[email]":{
-          required: true,
-          email: true
-        },
-        "user[password]":{
-          required: true,
-          minlength: 8
-        },
-        "user[password_confirmation]":{
-          required: true,
-          minlength: 8,
-          equalTo: '.field_account #user_password'
-        },
-        "user[phone]": {
-          required: true,
-          digits: true
-        }
-      },
-      messages: {
 
-      },
-      submithandler: function(form)
-      {
-       form.submit();
-      }
+    $(".find_booking_btn").click(function(event){
+      $.get("/bookings/find_booking_data?cover="+covers+"=",function(dataa){
 
+      });
     });
-  }
 
-
-  $(".submit_button").click(function(event){
-    formvalidation();
-    $(".registration_form").submit();
   });

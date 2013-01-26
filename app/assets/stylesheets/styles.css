@@ -639,3 +639,129 @@ a.check_availability1
     border-radius: 5px;
     text-decoration: none;
 }
+
+/* Booking New Page (24-01-2013) */
+
+.booking_body{
+    background:#d2e7e6;
+    border:1px solid #fff;
+    padding:28px 0px 34px 108px;
+    border-radius:4px;
+    width:788px;
+    margin-top:10px;}
+
+.make_booking{
+    background:#aecc76;
+    border:2px solid #fff;
+    padding:12px 0px 30px 18px;
+    width:640px;}
+
+.make_booking_text{
+    font-size:20px;
+    color:#fff;
+    font-family:Myriad Pro;
+    padding-bottom:12px;}
+
+.make_button{
+    margin-left:2px;
+    margin-bottom: -3px;}
+
+.make_drop_down_size{
+    width:451px;
+    height:33px;
+    font-size:12px;
+    border-radius:4px;
+    border:1px solid #000;
+    padding:7px 6px 5px 7px;}
+
+.find_table_row{
+    padding-top:12px;}
+
+.find_table_box{
+    float:left;
+    padding-right:10px;}
+
+.find_table_image{
+    float:left;
+    padding-right:5px;}
+
+.find_table_drop_size{
+    width:108px;
+    height:33px;
+    font-size:12px;
+    border:1px solid #000;
+    padding:7px 6px 5px 7px;}
+.find_table_drop_size1{
+    width:108px;
+    height:19px;
+    font-size:12px;
+    border:1px solid #000;
+    padding:7px 6px 5px 7px;
+    background-color: #F2F1F0;
+    }
+
+.find_booking_table{
+    width:664px;
+    background:#fff;
+    margin-top:10px;}
+
+.find_booking_table	th{
+    background:#509300;
+    font-family:Myriad Pro;
+    font-size:13px;
+    color:#fff;
+    font-weight:normal;
+    padding:12px 0px 14px;}
+
+.find_booking_table_heading{
+    width:122px;
+    border-right:1px solid #aecc76;}
+
+.find_booking_table_heading_2{
+    width:114px;
+    border-right:1px solid #aecc76;}
+
+.find_booking_table_heading_3{
+    width:68px;
+    border-right:1px solid #aecc76;}
+
+.find_booking_table_heading_4{
+    width:248px;
+    border-right:1px solid #aecc76;}
+
+.find_booking_table td{
+    padding:20px 0px 22px;
+    text-align:center;
+    font-size:13px;
+    border-right:1px solid #aecc76;
+    border-bottom:1px solid #aecc76;
+    font-family:Myriad Pro;
+    color:#696969;}
+
+.time_cafe_box {
+    padding-left:12px;}
+
+.cafe_green_box_active {
+    background: url("/assets/green_box.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    margin: 1px;
+    padding: 6px 6px 6px 5px;
+    text-align: center;}
+
+.cafe_green_box {
+    float: left;
+    font-size: 14px;
+    margin: 1px;}
+
+.cafe_green_box a {
+    background: url("/assets/brown_box.png") no-repeat scroll 0 0 transparent;
+    color: #43632E;
+    display: block;
+    padding: 6px 6px 6px 5px;
+    text-decoration: none;}
+
+.cafe_green_box a:hover{
+    background: url("/assets/green_box.png") no-repeat scroll 0 0 transparent;
+    color:#fff;}

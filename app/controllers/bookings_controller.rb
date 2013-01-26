@@ -81,6 +81,8 @@ class BookingsController < ApplicationController
     end
   end
   def make_booking
+    @restaurants = Restaurant.all
+
 
   end
 end
