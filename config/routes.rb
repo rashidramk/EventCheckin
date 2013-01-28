@@ -6,6 +6,8 @@ EventCheckin::Application.routes.draw do
   resources :bookings do
     collection do
       get 'make_booking'
+      get 'find_booking_data'
+      get 'checkin'
     end
   end
 

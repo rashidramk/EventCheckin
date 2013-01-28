@@ -1,0 +1,190 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title PeopleCheck::Booking
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+  %body
+    .conteanier_home
+      .all_header_box
+        .header_home
+          .fl
+            %a{:href => "/home1"}
+              %img{:alt => "image", :border => "0", :src => "/assets/small_logo.png"}/
+          .dashed_text_box
+            .dashed_text
+              %a{:href => "#."} Dashboard
+            .dashed_text2
+              %a{:href => "#."} Apps
+            .dashed_text3
+              %a{:href => "#."} I want this !
+            .clr
+          .header_field_box
+            %input.header_field_size{:placeholder => "Search", :type => "text"}/
+          .checkin_box
+            .checkin_box_text
+              %a{:href => "/bookings/make_booking"} Booking
+            .checkin_box_text
+              %a{:href => "/users/user_profile"} Profile
+            .checkin_box_text
+              %a{:href => "/bookings/checkin"} CheckIn
+            .checkin_box_text
+              %a{:href => "#."} Setting
+            .clr
+          .refresh_row
+            .refresh_box
+              .fl
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/refresh.png"}/
+              .refresh_text
+                %a{:href => "#."} Reset
+              .clr
+            .refresh_box
+              .fl
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/theme.png"}/
+              .refresh_text2
+                %a{:href => "#."} Theme
+              .clr
+            .refresh_box
+              .fl
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/logout.png"}/
+              .refresh_text
+                %a{:href => "#."} Logout
+              .clr
+            .clr
+          .clr
+      .body_wrepper_profile
+        .john_name_box
+          .john_name John Stephen
+          .fl
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/john.png"}/
+          .clr
+        .clr
+        .booking_body
+          .make_booking
+
+            //= form_tag("/bookings")
+            .dfdf
+              .make_booking_text Select Restaurant to search bookings
+              .make_button
+                %a{:href => "#."}
+                  %img{:alt => "image", :border => "0", :src => "/assets/name_button.png"}/
+              %div
+                %select{:class=>"make_drop_down_size", :id=>"restaurant_id", :name => "restaurants[restaurant_id]", :prompt => 'Select a restaurant'}
+                  = options_from_collection_for_select @restaurants, :id, :name
+              .find_table_row
+
+                .fl
+                  %a{:href => "#.",:class=>"find_booking_btn"}
+                    %img{:alt => "image", :border => "0", :src => "/assets/find_bookings.png"}/
+                .clr
+          .find_booking_table
+            .booking_confirm.hidden
+              You have successfully checkedIn for this booking.
+            %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+              %tbody.hidden{:class=>"table1"}
+                %tr
+                  %th.find_booking_table_heading Start Time
+                  %th.find_booking_table_heading_2 End Time
+                  %th.find_booking_table_heading_2 Guests
+                  %th.find_booking_table_heading_3 Customer Name
+                  %th.find_booking_table_heading_4 CheckIn ( Click to checkIn )
+                %tr
+                  %td Corner Table
+                  %td Table 1
+                  %td Min : 2 - Max : 5
+                  %td $10
+                  %td
+                    .time_cafe_box
+                      .cafe_green_box
+                        %a{:href => "#."} 14:00
+                      .clr
+      .all_footer
+        .footer
+          %div
+            %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+          .footer_text_box_new
+            .footer_text
+              %a{:href => "#."} Terms of Service
+            .footer_text_new
+              |
+            .footer_text
+              %a{:href => "#."} Privacy Policy
+            .footer_text_new
+              |
+            .footer_text
+              %a{:href => "#."} Support
+            .footer_text_new
+              |
+            .footer_text
+              %a{:href => "#."} Contact Us
+            .clr
+          %div
+            %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
+:javascript
+
+  $(document).ready(function(){
+    $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+    $('.find_table_drop_size1').click(function(event){$('#ui-datepicker-div').css('z-index','30');});
+    $('.find_table_drop_size1').datepicker({
+       dateFormat: "dd/mm/yy",
+       onSelect: function(dateText, inst){
+         selDate = dateText;
+
+         }
+    });
+
+    $(".find_booking_btn").click(function(event){
+      res_id = $("#restaurant_id").val();
+          $(".booking_confirm").hide();
+      //date= $(".find_table_drop_size1").val();
+      //time = $("#time_slots").val();
+      //guests = $("#covers").val();
+      $.get("/bookings?restaurant_id="+res_id,function(data){
+        $(".table1").html("");
+        $(".table1").html('<tr><th class="find_booking_table_heading">Date</th><th class="find_booking_table_heading">Start Time</th><th class="find_booking_table_heading_2">End Time</th><th class="find_booking_table_heading_2">Guests</th><th class="find_booking_table_heading_3">Customer Name</th><th class="find_booking_table_heading_4">CheckIn ( Click to CheckIn)</th></tr>');
+        tables = data;
+        if(tables.length>0)
+        {
+          for(var i=0;i<tables.length;i++)
+          {
+           console.log(i);
+
+            div="";
+            s_date = tables[i].start_time.split("T")[0];
+            s_time = tables[i].start_time.split("T")[1];
+            e_date = tables[i].end_time.split("T")[0];
+            e_time = tables[i].end_time.split("T")[1];
+
+            div="<tr table_id="+tables[i].id+"><td>"+s_date+"</td><td>"+s_time+"</td><td>"+e_time+"</td><td>"+tables[i].guests+"</td><td>Rashed</td><td><div class='time_cafe_box'><a href='#.' class='checkin_button'>CheckIn</a><div class='clr'></div></div> </td></tr>";
+             $(".table1").append(div);
+          }
+        }
+        else{
+          div='<tr><td colspan="6">No Booking found for given restaurant.</td></tr>;'
+          $(".table1").append(div);
+        }
+        $(".table1").show();
+        confirm_booking();
+
+      });
+      event.preventDefault();
+      return false;
+    });
+    function confirm_booking()
+    {
+      $(".checkin_button").unbind("click");
+      $(".checkin_button").click(function(event){
+      if(confirm("Are you sure, you want to checkIn for this booking ?"))
+      {
+
+          $(".table1").hide();
+          $(".booking_confirm").show();
+      }
+      event.preventDefault();
+      return false;
+      });
+    }
+  });

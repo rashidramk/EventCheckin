@@ -22,11 +22,11 @@
             %input.header_field_size{:placeholder => "Search", :type => "text"}/
           .checkin_box
             .checkin_box_text
-              %a{:href => "#."} CheckIn
+              %a{:href => "/bookings/make_booking"} Booking
             .checkin_box_text
-              %a{:href => "#."} Profile
+              %a{:href => "/users/user_profile"} Profile
             .checkin_box_text
-              %a{:href => "#."} Event
+              %a{:href => "/bookings/checkin"} CheckIn
             .checkin_box_text
               %a{:href => "#."} Setting
             .clr
@@ -89,54 +89,56 @@
                       %img{:alt => "image", :border => "0", :src => "/assets/clock.png"}/
                   .fl
                     %select.find_table_drop_size#time_slots
-                      %option{:value => "12:00 AM"} 12:00 AM
-                      %option{:value => "12:30 AM"} 12:30 AM
-                      %option{:value => "1:00 AM"} 1:00 AM
-                      %option{:value => "1:30 AM"} 1:30 AM
-                      %option{:value => "2:00 AM"} 2:00 AM
-                      %option{:value => "2:30 AM"} 2:30 AM
-                      %option{:value => "3:00 AM"} 3:00 AM
-                      %option{:value => "3:30 AM"} 3:30 AM
-                      %option{:value => "4:00 AM"} 4:00 AM
-                      %option{:value => "4:30 AM"} 4:30 AM
-                      %option{:value => "5:00 AM"} 5:00 AM
-                      %option{:value => "5:30 AM"} 5:30 AM
-                      %option{:value => "6:00 AM"} 6:00 AM
-                      %option{:value => "6:30 AM"} 6:30 AM
-                      %option{:value => "7:00 AM"} 7:00 AM
-                      %option{:value => "7:30 AM"} 7:30 AM
-                      %option{:value => "8:00 AM"} 8:00 AM
-                      %option{:value => "8:30 AM"} 8:30 AM
-                      %option{:value => "9:00 AM"} 9:00 AM
-                      %option{:value => "9:30 AM"} 9:30 AM
-                      %option{:value => "10:00 AM"} 10:00 AM
-                      %option{:value => "10:30 AM"} 10:30 AM
-                      %option{:value => "11:00 AM"} 11:00 AM
-                      %option{:value => "11:30 AM"} 11:30 AM
-                      %option{:value => "12:00 PM"} 12:00 PM
-                      %option{:value => "12:30 PM"} 12:30 PM
-                      %option{:value => "1:00 PM"} 1:00 PM
-                      %option{:value => "1:30 PM"} 1:30 PM
-                      %option{:value => "2:00 PM"} 2:00 PM
-                      %option{:value => "2:30 PM"} 2:30 PM
-                      %option{:value => "3:00 PM"} 3:00 PM
-                      %option{:value => "3:30 PM"} 3:30 PM
-                      %option{:value => "4:00 PM"} 4:00 PM
-                      %option{:value => "4:30 PM"} 4:30 PM
-                      %option{:value => "5:00 PM"} 5:00 PM
-                      %option{:value => "5:30 PM"} 5:30 PM
-                      %option{:value => "6:00 PM"} 6:00 PM
-                      %option{:value => "6:30 PM"} 6:30 PM
-                      %option{:selected => "selected", :value => "7:00 PM"} 7:00 PM
-                      %option{:value => "7:30 PM"} 7:30 PM
-                      %option{:value => "8:00 PM"} 8:00 PM
-                      %option{:value => "8:30 PM"} 8:30 PM
-                      %option{:value => "9:00 PM"} 9:00 PM
-                      %option{:value => "9:30 PM"} 9:30 PM
-                      %option{:value => "10:00 PM"} 10:00 PM
-                      %option{:value => "10:30 PM"} 10:30 PM
-                      %option{:value => "11:00 PM"} 11:00 PM
-                      %option{:value => "11:30 PM"} 11:30 PM
+                      %option{:value => "00:00"} 00:00
+                      %option{:value => "00:30"} 00:30
+                      %option{:value => "01:00"} 01:00
+                      %option{:value => "01:30"} 01:30
+                      %option{:value => "2:00"} 2:00
+                      %option{:value => "2:30"} 2:30
+                      %option{:value => "3:00"} 3:00
+                      %option{:value => "3:30 "} 3:30
+                      %option{:value => "4:00 "} 4:00
+                      %option{:value => "4:30"} 4:30
+                      %option{:value => "5:00"} 5:00
+                      %option{:value => "5:30"} 5:30
+                      %option{:value => "6:00"} 6:00
+                      %option{:value => "6:30"} 6:30
+                      %option{:value => "7:00"} 7:00
+                      %option{:value => "7:30"} 7:30
+                      %option{:value => "8:00"} 8:00
+                      %option{:value => "8:30"} 8:30
+                      %option{:value => "9:00"} 9:00
+                      %option{:value => "9:30"} 9:30
+                      %option{:value => "10:00"} 10:00
+                      %option{:value => "10:30"} 10:30
+                      %option{:value => "11:00"} 11:00
+                      %option{:value => "11:30"} 11:30
+                      %option{:value => "12:00"} 12:00
+                      %option{:value => "12:30"} 12:30
+                      %option{:value => "13:00"} 13:00
+                      %option{:value => "13:30"} 13:30
+                      %option{:value => "14:00"} 14:00
+                      %option{:value => "14:30"} 14:30
+                      %option{:value => "15:00"} 15:00
+                      %option{:value => "15:30"} 15:30
+                      %option{:value => "16:00"} 16:00
+                      %option{:value => "16:30"} 16:30
+                      %option{:value => "17:00"} 17:00
+                      %option{:value => "17:30"} 17:30
+                      %option{:value => "18:00"} 18:00
+                      %option{:value => "18:30"} 18:30
+                      %option{:value => "19:00"} 19:00
+                      %option{:value => "19:30"} 19:30
+                      %option{:value => "20:00"} 20:00
+                      %option{:value => "20:30"} 20:30
+                      %option{:value => "21:00"} 21:00
+                      %option{:value => "21:30"} 21:30
+                      %option{:value => "22:00"} 22:00
+                      %option{:value => "22:30"} 22:30
+                      %option{:value => "23:00"} 23:00
+                      %option{:value => "23:30"} 23:30
+
+
                   .clr
                 .find_table_box
                   .find_table_image
@@ -171,8 +173,10 @@
                     %img{:alt => "image", :border => "0", :src => "/assets/find_button.png"}/
                 .clr
           .find_booking_table
+            .booking_confirm.hidden
+              A booking has been confirmed for the given date and time.
             %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
-              %tbody
+              %tbody.hidden{:class=>"table1"}
                 %tr
                   %th.find_booking_table_heading Table Name
                   %th.find_booking_table_heading_2 Table Number
@@ -203,13 +207,16 @@
           .footer_text_box_new
             .footer_text
               %a{:href => "#."} Terms of Service
-            .footer_text_new |
+            .footer_text_new
+              |
             .footer_text
               %a{:href => "#."} Privacy Policy
-            .footer_text_new |
+            .footer_text_new
+              |
             .footer_text
               %a{:href => "#."} Support
-            .footer_text_new |
+            .footer_text_new
+              |
             .footer_text
               %a{:href => "#."} Contact Us
             .clr
@@ -221,6 +228,7 @@
     $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
     $('.find_table_drop_size1').click(function(event){$('#ui-datepicker-div').css('z-index','30');});
     $('.find_table_drop_size1').datepicker({
+       dateFormat: "dd/mm/yy",
        onSelect: function(dateText, inst){
          selDate = dateText;
 
@@ -228,9 +236,57 @@
     });
 
     $(".find_booking_btn").click(function(event){
-      $.get("/bookings/find_booking_data?cover="+covers+"=",function(dataa){
+      res_id = $("#restaurant_id").val();
+      $(".booking_confirm").hide();
+      date= $(".find_table_drop_size1").val();
+      time = $("#time_slots").val();
+      guests = $("#covers").val();
+      $.get("/bookings/find_booking_data?time="+time+"&guests="+guests+"&date="+date+"&restaurant_id="+res_id,function(data){
+        $(".table1").html("");
+        $(".table1").html('<tr><th class="find_booking_table_heading">Table Name</th><th class="find_booking_table_heading_2">Table Number</th><th class="find_booking_table_heading_2">Capacity</th><th class="find_booking_table_heading_3">Price</th><th class="find_booking_table_heading_4">Availability ( Click time to reserve )</th></tr>');
+        tables = data;
+        if(tables.length>0)
+        {
+          for(var i=0;i<tables.length;i++)
+          {
+           console.log(i);
+
+            div="";
+            div="<tr table_id="+tables[i].id+"><td>"+tables[i].table_name+"</td><td>Table"+tables[i].table_no+"</td><td>Min : "+tables[i].min_covers+" - Max : "+tables[i].max_covers+"</td><td>$10</td><td><div class='time_cafe_box'><div class='cafe_green_box_active'>12:00</div><div class='cafe_green_box'><a href='#.'>12:30</a></div><div class='cafe_green_box'><a href='#.'>13:00</a></div><div class='cafe_green_box'><a href='#.'>13:30</a></div><div class='clr'></div></div> </td></tr>";
+             $(".table1").append(div);
+          }
+        }
+        else{
+          div='<tr><td colspan="5">No table found for given guests and time. Please try other.</td></tr>;'
+          $(".table1").append(div);
+        }
+        $(".table1").show();
+        confirm_booking();
 
       });
+      event.preventDefault();
+      return false;
     });
-
+    function confirm_booking()
+    {
+      $(".cafe_green_box").unbind("click");
+      $(".cafe_green_box").click(function(event){
+      if(confirm("Are you sure, you want to book this slot ?"))
+      {
+        b_time= $(this).text();
+        res_id = $("#restaurant_id").val();
+        date= $(".find_table_drop_size1").val();
+        time = $("#time_slots").val();
+        guests = $("#covers").val();
+        table_id= $(this).parent().parent().parent().attr("table_id");
+        $.post("/bookings?table_id="+table_id+"&b_time="+b_time+"&restaurant_id="+res_id+"&date="+date+"&guests="+guests,function(data){
+          console.log(data);
+          $(".table1").hide();
+          $(".booking_confirm").show();
+        });
+      }
+      event.preventDefault();
+      return false;
+      });
+    }
   });
