@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    debugger
+    #debugger
     @user = User.new(params[:user])
     if @user.save
       redirect_to "/home1"
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
-    debugger
+    #debugger
     @user = User.find_by_id(params[:id]) || current_user
       if @user.update_attributes(params[:user])
         redirect_to "/users/user_profile"

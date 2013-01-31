@@ -11,7 +11,7 @@ class SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    debugger
+    #debugger
     user = User.find_by_email(params[:user][:email].downcase)
     if user
       if user && user.valid_password?(params[:user][:password])

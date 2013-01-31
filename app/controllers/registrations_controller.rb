@@ -8,7 +8,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    debugger
+    #debugger
     build_resource
 
     if resource.save

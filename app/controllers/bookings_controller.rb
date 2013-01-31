@@ -39,7 +39,7 @@ class BookingsController < ApplicationController
   # POST /bookings
   # POST /bookings.json
   def create
-    debugger
+    #debugger
     @booking = Booking.new(params[:booking])
     @booking.table_id= params[:table_id]
     @booking.restaurant_id = params[:restaurant_id]
