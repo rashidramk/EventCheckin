@@ -12,7 +12,7 @@
         .clr
       .body_area
         .body_col_1
-          = form_for(resource, :as => resource_name, :url => session_path(resource)) do |f|
+          = form_for(resource, :as => resource_name, :url => sessions_path()) do |f|
             .body_col_1_text Login
             .body_field
               =f.email_field :email, :placeholder=>"Enter Your Email Address",:class =>"body_field_size"

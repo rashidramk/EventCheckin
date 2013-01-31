@@ -70,11 +70,18 @@
               %img{:alt => "image", :border => "0", :src => "/assets/john.png"}/
           .clr
         .clr
-        .profile_body
+
+        -if @user.pic.size.nil?
+        -else
+
+        .profile_body{:style=>"background: url(#{@user.avatar.url(:large)}) no-repeat scroll 0 0 transparent"}
           .user_col1
             %div
               %a{:href => "#."}
-                %img{:alt => "image", :border => "0", :src => "/assets/user_new.png"}/
+                -if @user.pic.size.nil?
+                  %img{:alt => "image", :border => "0", :src => "/assets/user_new.png"}/
+                -else
+                  =image_tag @user.pic.url(:thumb)
             .letest_text
               %a{:href => "#."}
                 - if current_user.first_name and current_user.last_name
@@ -94,32 +101,37 @@
             .letest_text2
               %a{:href => "#."} Connections
             .letest_text4
-              %a{:href => "#."} Photos
+              %a{:href => "#.",:class=>"view_photos"} Change Photos
           .user_col2
-            .user_col2_textarea
-              %textarea.user_col2_textarea_size
-            .user_field_button
-              .user_col2_field
-                %input.user_col2_field_size{:type => "text"}/
-              .fl
-                %a.user_col2_button{:href => "#."} Browse
-              .clr
-            .user_field_button
-              .user_col2_field
-                %input.user_col2_field_size{:type => "text"}/
-              .fl
-                %a.user_col2_button{:href => "#."} Browse
-              .clr
-            .remind_button_box
-              .remind_button
-                %a.user_col2_button{:href => "#."} Remind Later
-              .remind_button
-                %a.user_col2_button{:href => "#."} Save
-              .clr
+            =form_for @user, :url => "/users/update", :html => { :class => 'regestration_form' } do |f|
+              .user_col2_textarea
+                //%textarea.user_col2_textarea_size
+                = f.text_area :tag_line, :class=>"user_col2_textarea_size",:placeholder=>"Enter tag line here."
+              .user_field_button
+                .user_col2_field
+                  =f.file_field :pic, :class=>"hidden"
+                  %input.user_col2_field_size{:id=>"user_pic_field",:placeholder=>"Profile picture"}/
+                .fl
+                  %a.user_col2_button{:href => "#.",:id=>"pic_button"} Browse
+                .clr
+              .user_field_button
+                .user_col2_field
+                  =f.file_field :avatar, :class=>"hidden"
+                  %input.user_col2_field_size{:id=>"user_avatart_field",:placeholder=>"Background picture"}/
+                .fl
+                  %a.user_col2_button{:href => "#.",:id=>"avatar_button"} Browse
+                .clr
+              .remind_button_box
+                .remind_button
+                  %a.user_col2_button{:href => "#.", :id=>"remind_later"} Remind Later
+                .remind_button
+                  =f.submit :id=>"submit_button",:class=>"hidden"
+                  %a.user_col2_button{:href => "#.", :id=>"save_button"} Save
+                .clr
           .user_col3
             .user_col3_text_box
-              When I grow up.I want to drive volvo station vagon.I like flouriscent colur.
-              %p I like to design stuff
+              = current_user.tag_line
+              %p
             .user_col3_text_box
               Loss Asngeles CA
               = current_user.email
@@ -152,3 +164,23 @@
             %img{:alt => "image", :border => "0", :src => "/assets/BORDER_TOP.png"}/
 :javascript
   $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+  $("#pic_button").click(function(){
+    $("#user_pic").click();
+    a=$("#user_pic").val();
+    $("#user_pic_field").val(a);
+    console.log("adf");
+  });
+  $("#avatar_button").click(function(){
+    $("#user_avatar").click();
+    console.log("adf");
+  });
+  $("#save_button").click(function(){
+    $("#submit_button").click();
+  });
+  $("#remind_later").click(function(){
+    $(".regestration_form").hide();
+  });
+  $(".view_photos").click(function(){
+    $(".regestration_form").show();
+  });
+
