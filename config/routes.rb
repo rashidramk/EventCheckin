@@ -11,20 +11,20 @@ EventCheckin::Application.routes.draw do
     end
   end
 
-  devise_for :users, :controllers => {:registrations =>"registrations", :sessions => "sessions" }
+
 
   devise_scope :user do
     match "/users/sign_out" => "sessions#destroy"
     #match "/sign_in"  => "sessions#new"
-    match "/users/sign_in"  => "sessions#new"
+    #match "/users/sign_in"  => "sessions#new"
     match 'sign_up' => "registrations#new"
   end
-
+  devise_for :users, :controllers => {:registrations =>"registrations", :sessions => "sessions" }
   #resources :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
   match "users/user_profile" => "users#user_profile"
-  match "users/update" =>"users#update"
+  #match "users/update" =>"users#update"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -74,7 +74,7 @@ EventCheckin::Application.routes.draw do
   root :to => 'home#index'
   resources :home
   resources :home1
-  resources  :sessions
+  resource  :sessions
 
   # See how all your routes lay out with "rake routes"
 
