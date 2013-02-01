@@ -462,7 +462,13 @@ a.login_button{
 	background:#1c1c1c;
 	float:right;
 	margin-right:18px;
-	padding:6px 12px 8px;}	
+	padding:6px 12px 8px;}
+.john_name_box1{
+    border:1px solid #fff;
+    background:#1c1c1c;
+    float:right;
+    margin-right:-80px;
+    padding:6px 12px 8px;}
 
 .body_wrepper_profile{
     margin: auto;

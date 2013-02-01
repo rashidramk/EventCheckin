@@ -55,6 +55,21 @@
             .clr
           .clr
       .body_area_wrepper
+        .john_name_box1
+          .john_name
+            - if current_user.first_name and current_user.last_name
+              = current_user.first_name+" "+current_user.last_name
+            - elsif current_user.first_name
+              = current_user.first_name
+            -elsif current_user.last_name
+              = current_user.last_name
+            -else
+              User Name
+          .fl
+            %a{:href => "#."}
+              %img{:alt => "image", :border => "0", :src => "/assets/john.png"}/
+          .clr
+        .clr
         .all_profile_box
           .home_col1
             .home_image_box
@@ -101,7 +116,7 @@
               .home_image_text2 Deals
           .clr
         .image_box
-          %img{:alt => "image", :border => "0", :src => "/assets/image.png"}/
+          %img{:alt => "image", :border => "0", :src => "/assets/image_calendar.png"}/
         .clr
       .all_footer
         .footer

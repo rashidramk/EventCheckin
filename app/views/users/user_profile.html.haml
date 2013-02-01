@@ -70,10 +70,8 @@
               %img{:alt => "image", :border => "0", :src => "/assets/john.png"}/
           .clr
         .clr
-
         -if @user.pic.size.nil?
         -else
-
         .profile_body{:style=>"background: url(#{@user.avatar.url(:large)}) no-repeat scroll 0 0 transparent"}
           .user_col1
             %div
